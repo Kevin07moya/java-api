@@ -19,7 +19,7 @@ public class PersonaController {
     public Iterable<Persona> getAll(){
         return this.personaService.getAll();
     }
-    @PostMapping("/update/{id}")
+    @PostMapping("/update")
     public Persona updateperson(@RequestBody Persona persona){
         return this.personaService.modifyPerson(persona);
     }

@@ -10,10 +10,6 @@ import org.hibernate.annotations.ValueGenerationType;
 public class Persona {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-
-    private Integer id;
-    @Column
     private Long numDocumento;
     @Column
     private String Nombre;
@@ -21,14 +17,6 @@ public class Persona {
     private String Apellido;
     @Column
     private String correoElectronico;
-
-    public Integer getId() {
-        return id;
-    }
-
-    public void setId(Integer id) {
-        this.id = id;
-    }
 
     public Long getNumDocumento() {
         return numDocumento;
@@ -60,25 +48,6 @@ public class Persona {
 
     public void setCorreoElectronico(String correoElectronico) {
         this.correoElectronico = correoElectronico;
-    }
-
-    public Persona(Integer id, String Nombre, String Apellido, String correoElectronico) {
-        super ();
-        this.id = id;
-        this.Nombre = Nombre;
-        this.Apellido = Apellido;
-        this.correoElectronico = correoElectronico;
-    }
-
-    public Persona(String Nombre, String Apellido, String correoElectronico) {
-        super ();
-        this.Nombre = Nombre;
-        this.Apellido = Apellido;
-        this.correoElectronico = correoElectronico;
-    }
-    public Persona() {
-        super ();
-
     }
 
 
